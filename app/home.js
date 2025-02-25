@@ -6,6 +6,7 @@ import ScreenHeaderBtn from "../components/ScreenHeaderBtn";
 import Welcome from "../components/Welcome";
 import PopularMeditation from "../components/PopularMeditation";
 import DailyMeditation from "../components/DailyMeditation";
+import DailyQuote from "../components/DailyQuote";
 const Home = () => {
     const [userDetails, setUserDetails] = useState(null);
   useEffect(() => {
@@ -30,7 +31,8 @@ const Home = () => {
           testID="screensDisplay"
         >
 <Welcome userDetails={userDetails ? JSON.parse(userDetails) : null} />
-<PopularMeditation/>
+<DailyQuote/>
+<PopularMeditation />
 <DailyMeditation/>
 </View>
       </ScrollView>
